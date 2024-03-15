@@ -1,4 +1,4 @@
-Packages:
+Packages/dependancies
 pandas
 seaborn
 palmerpinguins
