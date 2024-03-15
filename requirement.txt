@@ -1,1 +1,8 @@
-
+Packages:
+pandas
+seaborn
+palmerpinguins
+shiny.express
+plotly
+numpy
+matplotlib
