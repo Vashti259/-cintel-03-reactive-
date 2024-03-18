@@ -6,3 +6,4 @@ shiny.express
 plotly
 numpy
 matplotlib
+reactive
