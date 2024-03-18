@@ -9,7 +9,7 @@ Learn more about reactivity (e.g. reactive.calc, reactive.value, reactive.event)
 Specifically, the user will have a check box group, one per species, to decide what data to show.
 
 #  Dependancies:
-### * pandas, * seaborn, * palmerpinguins, * shiny.express, * plotly, * numpy, * matplotlib, * reactive
+### * pandas, * seaborn, * palmerpinguins, * shiny.express, * plotly, * numpy, * matplotlib, * reactive, *jsonschema
 
 
 
