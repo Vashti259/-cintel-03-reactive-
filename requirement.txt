@@ -1,9 +1,4 @@
 Packages/dependancies
 pandas
-seaborn
-palmerpinguins
-shiny.express
-plotly
-numpy
-matplotlib
-reactive
+pyarrow
+shinylive
