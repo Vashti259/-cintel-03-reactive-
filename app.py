@@ -13,7 +13,6 @@ with ui.layout_columns():
     def plot2():
         return px.histogram(px.data.tips(), y="total_bill")
 
-
 from shiny.express import ui
 
 with ui.sidebar(bg="#f8f8f8"):
@@ -25,15 +24,19 @@ from palmerpenguins import load_penguins
 from shiny import render
 from shiny.express import ui
 
-penguins = load_penguins()
+#Data Table and Data Grid
+with ui.layout_columns():
+    with ui.card(full_screen=True):
+        ui.h2("Penguin Data Table")
+        @render.data_frame
+        def penguins_datatable():
+            return render.DataTable(filtered_data())
 
-ui.h2(" Data Grid")
-
-
-@render.data_frame
-def penguins_df():
-    return render.DataGrid(penguins)
-
+    with ui.card(full_screen=True):
+        ui.h2("Penguin Data Grid")
+        @render.data_frame
+        def penguins_datagrid():
+            return render.DataGrid(filtered_data())
 
 import seaborn as sns
 from palmerpenguins import load_penguins
@@ -43,7 +46,6 @@ from shiny.express import input, ui
 penguins = load_penguins()
 
 ui.input_slider("n", "Number of bins", 1, 100, 20)
-
 
 @render.plot(alt="A Seaborn histogram on penguin body mass in grams.")
 def plot():
